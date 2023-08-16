@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane  fx:controller="gui_javafx_mvc.MainWindowController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Panel 1: Display the main label -->
+    <VBox layoutX="10" layoutY="10">
+        <Label text="Excel Functionality" />
+    </VBox>
+
+    <!-- Panel 2: Prompt the user to enter numbers -->
+    <VBox layoutX="10" layoutY="50">
+        <Label text="Enter numbers separated by commas:" />
+    </VBox>
+
+    <!-- Panel 3: Input field for entering numbers -->
+    <VBox layoutX="10" layoutY="90">
+        <TextField fx:id="inputField" prefWidth="380" />
+    </VBox>
+
+    <!-- Panel 4: Radio buttons for selecting the desired calculation -->
+    <VBox layoutX="10" layoutY="130" spacing="5">
+        <RadioButton fx:id="totalRadioButton" text="Total"/>
+        <RadioButton fx:id="averageRadioButton" text="Average"/>
+        <RadioButton fx:id="maxRadioButton" text="Maximum"/>
+        <RadioButton fx:id="minRadioButton" text="Minimum"/>
+    </VBox>
+
+    <!-- Panel 5: Button for initiating the calculation -->
+    <VBox layoutX="10" layoutY="213">
+        <Button text="Calculate" onAction="#calculateButtonClicked" />
+<!--            <onAction>#calculateButtonClicked</onAction>-->
+<!--        </Button>-->
+    </VBox>
+
+    <!-- Panel 6: Display the result -->
+    <VBox layoutX="10" layoutY="240">
+        <HBox spacing="10">
+            <Label text="Result:" />
+            <TextField fx:id="resultField" prefWidth="300" editable="false" />
+        </HBox>
+    </VBox>
+</AnchorPane>
